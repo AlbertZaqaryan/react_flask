@@ -1,0 +1,207 @@
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --border: #334155;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --danger: #f87171;
+  --green: #34d399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  outline: 2px solid var(--accent);
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: filter 0.15s ease;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+button.primary {
+  background: var(--accent);
+  color: #06283d;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+button.danger {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.error {
+  background: rgba(248, 113, 113, 0.15);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.car-form {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.car-form h2 {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.9rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+label.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: end;
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.car-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.car-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.car-head h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.badge.in {
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--green);
+}
+
+.badge.out {
+  background: rgba(248, 113, 113, 0.15);
+  color: var(--danger);
+}
+
+dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+dt {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+dd {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+dd.price {
+  color: var(--accent);
+  font-weight: 700;
+}
