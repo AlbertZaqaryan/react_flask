@@ -63,7 +63,7 @@ export default function App() {
   return (
     <div className="app">
       <header>
-        <h1>🚗 Car Inventory</h1>
+        <h1>🚗 Car Club Misaki mot</h1>
         <form className="search" onSubmit={handleSearch}>
           <input
             placeholder="Search make or model..."
